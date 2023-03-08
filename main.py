@@ -2,9 +2,9 @@
 # Collaborator - Charleigh Walker
 
 
-def encode_str(data_string):
+def encode_str(user_pw):
     res = ""
-    for char in data_string:
+    for char in user_pw:
         if char.isdigit():
             digit = int(char) + 3
             if digit >= 10:
@@ -15,8 +15,9 @@ def encode_str(data_string):
     return res
 
 
-def decoded_str(encoded_data, data_string):
-    print(f"The encoded password is {encoded_data}, and the original password is {data_string}\n")
+# decoded_str already exists so I changed a variable 
+def decoded_str(encoded_data, user_pw):
+    print(f"The encoded password is {encoded_data}, and the original password is {user_pw}\n")
 
 
 def main():
@@ -31,11 +32,11 @@ def main():
         user_choice = input("Please enter an option: ")
 
         if user_choice == "1":
-            data_string = input("Please enter your password to encode: ")
-            encoded_data = encode_str(data_string)
+            user_pw = input("Please enter your password to encode: ")
+            encoded_data = encode_str(user_pw)
             print("Your password has been encoded and stored!\n")
         elif user_choice == "2":
-            decoded_str(encoded_data, data_string)
+            decoded_str(encoded_data, user_pw)
         elif user_choice == "3":
             menu_continue = False
 
