@@ -15,12 +15,16 @@ def encode_str(data_string):
     return res
 
 
+def decoded_str(encoded_data, data_string):
+    print(f"The encoded password is {encoded_data}, and the original password is {data_string}\n")
+
+
 def main():
     menu_continue = True
     while menu_continue:
         print("Menu\n"
-              "_____________\n"
-              "\n1. Encode\n"
+              "-------------\n"
+              "1. Encode\n"
               "2. Decode\n"
               "3. Quit\n")
 
@@ -31,11 +35,10 @@ def main():
             encoded_data = encode_str(data_string)
             print("Your password has been encoded and stored!\n")
         elif user_choice == "2":
-            print(f"The encoded password is {encoded_data}, and the original password is {data_string}\n")
+            decoded_str(encoded_data, data_string)
         elif user_choice == "3":
             menu_continue = False
 
 
 if __name__ == "__main__":
     main()
-
