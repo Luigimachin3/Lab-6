@@ -1,4 +1,6 @@
 # Lab 6 - Luis Martinez
+# Collaborator - Charleigh Walker
+
 
 def encode_str(data_string):
     res = ""
